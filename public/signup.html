@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marcos' Pizza Store - Confirmation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon"
+      type="image/png"
+      href="https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/pizza-fast-food-bake-bread-512.png">
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+      />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      />
+    <style>
+      table {
+        color: darkslategray;
+      }
+      table tr th {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container px-lg-5">
+      <h1>Let's create an account for you</h1>
+
+      <ul class="nav justify-content-left">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Start your order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/orders.html">Order listing</a>
+        </li>
+      </ul>
+      <br />
+
+      <form method="post" action="/signup" id="register">
+        <div class="container px-lg-5">
+          <div class="row-4 justify-content-center">
+            <div class="form-group">
+              <label for="username">Login name</label>
+              <input
+                required
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Login name"
+                class="form-control"
+                />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                class="form-control"
+                />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                required
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                class="form-control"
+
+                />
+            </div>
+            <div class="form-group">
+              <label for="password2">Confirm Password</label>
+              <input
+                required
+                type="password"
+                id="password2"
+                name="password2"
+                placeholder="Password"
+                class="form-control"
+
+                />
+            </div>
+            <script>
+              $('#password, #password2').on('keyup', function () {
+                if ($('#password').val() == $('#password2').val()) {
+                  $('#message').html('Passwords Match').css('color', 'green');
+                  $("#submit").removeProp("disabled");
+                } else {
+                  $('#message').html('Passwords dont Match').css('color', 'red');
+                  $("#submit").prop("disabled", true); 
+                }
+              });
+            </script>
+            <span id='message'></span>
+            <br>
+
+            <button id="submit" name="submit" type="submit" class="btn
+              btn-success">
+              Register
+            </button>
+            <button name="hasAcc" id="hasAcc" type="submit" class="btn btn m-3">
+              <a href="signin.html">I have an account</a>
+            </button>
+            <div class="form-group margin-bottom-10"></div>
+            <div id="statusMsg"></div>
+            <a href="/signin.html"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="javascripts/register.js"></script>
+  </body>
+</html>
