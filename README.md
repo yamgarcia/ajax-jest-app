@@ -1,6 +1,6 @@
 <h4 align="center">
 <br>
- <b>Pizza ordering with server side rendering app and unit testing</b>
+ <b>Pizza ordering app with user authentication and unit testing</b>
 </h4>
 <p align="center">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-red">
@@ -20,7 +20,8 @@ The following project was made using
 - [Node.js](https://nodejs.org/en/)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 - [MongoDB](https://www.mongodb.com/)
-
+- [AJAX](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX)
+- [PassportJS](http://www.passportjs.org/packages/passport-jwt/)
 ### :muscle: Project
 
 <b>SSR app</b> that uses ajax and MongoDB Compass on the backend and <b>JEST</b> for unit testing.
